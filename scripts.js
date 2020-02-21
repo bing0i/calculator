@@ -7,6 +7,8 @@ function showText() {
     let display = document.querySelector('#display');
     let buttons = Array.from(document.querySelectorAll('button'))
     buttons.forEach(button => button.addEventListener('click', function() {
+        if (button.value === 'hi')
+            return;
         if (button.value === '0' && display.innerText[display.innerText.length - 1] === '/') {
             alert('Nah, hooman');
             return;

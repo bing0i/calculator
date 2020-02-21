@@ -30,11 +30,22 @@ button:active {
     color: #d1e8e2;
 }
 
-#btnEnter:active, #btnCE:active, #btnDot:active, #btnAdd:active, #btnSub:active, #btnMulti:active, #btnDiv:active, #btnAC:active {
+#btnEnter:active, #btnCE:active, #btnDot:active, #btnAdd:active, #btnSub:active, 
+#btnMulti:active, #btnDiv:active, #btnAC:active, #btnGithub:active {
     transform: translateY(4px) translateX(4px);
     box-shadow: 4px 4px 2px black;
 }
 
 #btnEnter {
-    padding-right: 170px;
+    width: 190px;
+}
+
+#buttons {
+    text-align: center;
+}
+
+#btnGithub {
+    background-color: orange;
+    box-shadow: 4px 4px 2px #af473c;
+    color: black;
 }
