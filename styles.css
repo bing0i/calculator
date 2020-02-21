@@ -2,6 +2,11 @@ body {
     background-color:  black;
     color: white;
     font-size: 50px;
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer */
+    -khtml-user-select: none; /* KHTML browsers (e.g. Konqueror) */
+    -webkit-user-select: none; /* Chrome, Safari, and Opera */
+    -webkit-touch-callout: none; /* Disable Android and iOS callouts*/ 
 }
 
 button {
@@ -59,6 +64,9 @@ input {
     font-size: 80px;
     font-family: 'Squada One';
     background-color: black;
-    color: white;
+    color: transparent;
+    text-shadow: 0px 0px 0px white;
     border: none;
+    outline: none;
+    
 }
