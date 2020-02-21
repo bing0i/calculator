@@ -7,9 +7,13 @@ function showText() {
     let display = document.querySelector('#display');
     let buttons = Array.from(document.querySelectorAll('button'))
     buttons.forEach(button => button.addEventListener('click', function() {
+        if (display.value.length === 0 && isOperator(button.value))
+            return;
+        if (display.value.length === 20 && button.value !== 'ac' && button.value !== 'ce' && button.value !== 'enter')
+            return;
         if (button.value === 'hi')
             return;
-        if (button.value === '0' && display.innerText[display.innerText.length - 1] === '/') {
+        if (button.value === '0' && display.value[display.value.length - 1] === '/') {
             alert('Nah, hooman');
             return;
         }
@@ -17,11 +21,11 @@ function showText() {
             calArr = [];
             opArr = [];
             strNumber = '';
-            display.innerText = '';
+            display.value = '';
             showResult = false;
         }
-        if ((isOperator(display.innerText[display.innerText.length - 1]) && isOperator(button.value))
-                || isDots(display.innerText + button.value))
+        if ((isOperator(display.value[display.value.length - 1]) && isOperator(button.value))
+                || isDots(display.value + button.value))
             return;
         if (isOperator(button.value) || button.value === 'enter') {
             if (strNumber !== '')
@@ -31,7 +35,7 @@ function showText() {
                 opArr.push(button.value);
         }
         if (button.value !== 'ac' && button.value !== 'enter' && button.value !== 'ce') {
-            display.innerText += button.value;
+            display.value += button.value;
             if (!(isOperator(button.value)))
                 strNumber += button.value;
         }
@@ -39,7 +43,7 @@ function showText() {
             calArr = [];
             opArr = [];
             strNumber = '';
-            display.innerText = '';
+            display.value = '';
         }
         else if (button.value === 'enter') {
             if (opArr.length === 0 || calArr.length === 0)
@@ -54,13 +58,13 @@ function showText() {
                 calArr.splice(index, 2, result);
                 opArr.splice(index, 1);
             }
-            display.innerText = calArr;
+            display.value = calArr;
             showResult = true;
         }
         else if (button.value === 'ce') {
-            if (display.innerText.length === 0)
+            if (display.value.length === 0)
                 return;
-            if (isOperator(display.innerText[display.innerText.length - 1])) {
+            if (isOperator(display.value[display.value.length - 1])) {
                 backspaceFlag = false;
                 opArr.pop();
             }
@@ -68,8 +72,8 @@ function showText() {
                 backspaceFlag = true;
                 calArr.pop();
             }
-            display.innerText = display.innerText.slice(0, display.innerText.length - 1);
-            strNumber = getLastNumber(display.innerText);
+            display.value = display.value.slice(0, display.value.length - 1);
+            strNumber = getLastNumber(display.value);
         }
         console.log(calArr);
         console.log(opArr);
