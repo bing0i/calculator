@@ -1,7 +1,6 @@
 body {
     background-color:  black;
     color: white;
-    font-family: 'Squada One';
     font-size: 50px;
 }
 
@@ -48,4 +47,18 @@ button:active {
     background-color: orange;
     box-shadow: 4px 4px 2px #af473c;
     color: black;
+}
+
+#input {
+    text-align: center;
+}
+
+input {
+    text-align: center;
+    padding: 20px 50px;
+    font-size: 80px;
+    font-family: 'Squada One';
+    background-color: black;
+    color: white;
+    border: none;
 }
