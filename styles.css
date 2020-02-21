@@ -1,18 +1,19 @@
 body {
     background-color:  black;
     color: white;
+    font-family: 'Squada One';
+    font-size: 50px;
 }
 
-
-
 button {
+    width: 80px;
     margin: 10px;
-    padding: 30px;
+    padding: 20px;
     font-size: 35px;
     border: none;
-    border-radius: 10px;
+    border-radius: 40px;
     outline: none;
-    box-shadow: 5px 5px 2px #00303f;
+    box-shadow: 4px 4px 2px #00303f;
     font-family: 'Squada One';
     color: white;
     background-color: #056571;
@@ -20,17 +21,20 @@ button {
 
 button:active {
     transform: translateY(4px) translateX(4px);
-    box-shadow: 5px 5px 2px black;
+    box-shadow: 4px 4px 2px black;
 }
 
 #btnEnter, #btnCE, #btnDot, #btnAdd, #btnSub, #btnMulti, #btnDiv, #btnAC {
-    padding: 20px;
     background-color: #af473c;
-    box-shadow: 5px 5px 2px #6f2232;
+    box-shadow: 4px 4px 2px #6f2232;
     color: #d1e8e2;
 }
 
 #btnEnter:active, #btnCE:active, #btnDot:active, #btnAdd:active, #btnSub:active, #btnMulti:active, #btnDiv:active, #btnAC:active {
     transform: translateY(4px) translateX(4px);
-    box-shadow: 5px 5px 2px black;
+    box-shadow: 4px 4px 2px black;
+}
+
+#btnEnter {
+    padding-right: 170px;
 }
