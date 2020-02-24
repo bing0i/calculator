@@ -75,9 +75,6 @@ function showText() {
             display.value = display.value.slice(0, display.value.length - 1);
             strNumber = getLastNumber(display.value);
         }
-        console.log(calArr);
-        console.log(opArr);
-        console.log(strNumber);
     }));
 }
 
